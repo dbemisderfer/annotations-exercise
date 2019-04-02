@@ -28,8 +28,26 @@ public class Author extends Person {
         books.add(book);
     }
 
-//    @Override   //commented out to get rid of error message
-    public String sortName() {
+    @Override
+    public String fullName() {
         return String.format("%s, %s", lastName, firstName);
     }
+
+    public static void main(String[] args) {
+//        Author jan = new Author("Jan", "Jansen");
+//        jan.books = new ArrayList(List.of(1,2,3));
+//
+//        for (String book : jan.getBooks()) {
+//            System.out.println(book);
+//        }
+    }
 }
+
+
+//David Stephens [2:48 PM]
+//Okay, so I figured out the exception I was trying to
+// trigger earlier to explain why just putting an Annotation
+// will not help run your application. if you add this to
+// your author class on the easy_fix branch, it will not
+// throw an exception:
+//Why you need to fix it.
